@@ -8,6 +8,17 @@ Follow the steps below as an example for how to create a python environment and 
 Note: You have to use `sudo` because of Bluetooth.
 Note: You don't have to use `nano`, you can use your favorite editor. 
 Note: Add the "Example Code" below in `reading_scale.py`.
+
+For Debian-based systems you need:
+```bash
+sudo apt update
+sudo apt install libglib2.0-dev
+```
+For Fedora:
+```bash
+sudo dnf install glib2-devel
+```
+After that:
 ```bash
 dennis@test:~ $ mkdir scale_test/src -p
 dennis@test:~ $ python -m venv scale_test/.venv
@@ -36,12 +47,13 @@ after the given duration of measurement.
 ```python
 from time import monotonic
 
-from bodycompositionscale2.Scale import Scale
+from bcs2.Scale import Scale
 
 #
 # In seconds
 DURATION_MEASUREMENT = 5
 SCALE_ADDRESS = "5C:CA:D3:5E:65:8E"
+
 
 def main():
     scale = Scale(SCALE_ADDRESS)
