@@ -5,9 +5,13 @@ Create virtual environment and install
 ---------------------
 
 Follow the steps below as an example for how to create a python environment and install `BodyCompositionScale`
+
 Note: You have to use `sudo` because of Bluetooth.
+
 Note: You don't have to use `nano`, you can use your favorite editor. 
+
 Note: Add the "Example Code" below in `reading_scale.py`.
+
 
 For Debian-based systems you need:
 ```bash
